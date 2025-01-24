@@ -1,111 +1,71 @@
-"use client"
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
-const Hero = () => 
-    {
+"use client";
 
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/splide/css"; // Default Splide CSS
+import styles from "./audiance.module.css"; // CSS module for styling
+import Link from "next/link";
 
-        const images = [
-            "/images/slide2.png",
-            "/images/slide2.png",
-            "/images/slide2.png",
-            "/images/slide2.png",
-            "/images/slide2.png",
-            "/images/slide2.png",
-            "/images/slide2.png",
-            "/images/slide2.png",
-            "/images/slide2.png",
-            "/images/slide2.png",
-            "/images/slide2.png"
-         
-           
-        ];
-
-    const settings = {
-      centerPadding: "60px",
-      centerMode: true,
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 7,
-        slidesToScroll: 3,
-        centerMode: true, // Centers the active slide
-        className: "center",
-        // autoplay:true,
-        responsive: [
-            {
-                breakpoint: 1920,
-                settings: {
-                    slidesToShow: 7,
-                    slidesToScroll: 1,
-                    // centerPadding: "20px",
-                }
-            },
-            {
-                breakpoint: 1900,
-                settings: {
-                    slidesToShow: 7,
-                    slidesToScroll: 1,
-                    // centerPadding: "20px",
-                }
-            },
-            {
-                breakpoint: 1440,
-                settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 1,
-                    // centerPadding: "20px",
-                }
-            },
-            {
-                breakpoint: 1280,
-                settings: {
-                    slidesToShow: 5,
-                    slidesToScroll: 1,
-                    // centerPadding: "20px",
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    centerPadding: "20px",
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    centerPadding: "20px",
-                }
-            }
-        ]
-
-      };
+const SplideCarousel = () => {
+  const images = [
+    { id: 1, imageUrl: "/images/slide2.png", alt: "Image 1" },
+    { id: 2, imageUrl: "/images/slide2.png", alt: "Image 2" },
+    { id: 3, imageUrl: "/images/slide2.png", alt: "Image 3" },
+    { id: 4, imageUrl: "/images/slide2.png", alt: "Image 4" },
+    { id: 5, imageUrl: "/images/slide2.png", alt: "Image 5" },
+    { id: 6, imageUrl: "/images/slide2.png", alt: "Image 6" },
+    { id: 7, imageUrl: "/images/slide2.png", alt: "Image 7" },
+    { id: 8, imageUrl: "/images/slide2.png", alt: "Image 8" },
+  ];
 
   return (
-    <section className='hero'>
-      <div className='trustedBy'>
+    <>     <section className='growAudience'>
+    <div>
+        <h1 >Grow Your Audience <br /> with Zero Extra Effort</h1>
+        <p>Save time and boost your content. AutoSlides effortlessly turns your long videos into viral- <br /> ready slideshows for all your social media channels. Keep creating, keep posting, and watch <br /> your followers grow.</p>
+    </div> 
+    </section>
+    <Splide
+      options={{
+        type: "loop",
+        perPage: 3,
+        focus: "center",
+        autoplay: true,
+        interval: 2000,
+        flickMaxPages: 3,
+        updateOnMove: true,
+        pagination: false,
+        arrows: false, // Disable arrow buttons
+        padding: "10%",
+        throttle: 300,
+        // gap: "20px",  
+        breakpoints: {
+          1440: {
+            perPage: 1,
+            padding: "30%",
+          },
+        },
+      }}
+      aria-label="Splide Carousel"
+      className={styles.splide}
+    >
+      {images.map((image) => (
+        <SplideSlide key={image.id} className={styles.splideSlide}>
+          <img
+            src={image.imageUrl}
+            alt={image.alt}
+            className={styles.slideImage}
+          />
+        </SplideSlide>
+      ))}
+    </Splide>
 
-      </div>
-      <div className='heading'>
-        <h1>
-            Create Viral Shorts <br /> in 30 Seconds
-        </h1>
-      </div>
-      <div className='subHeading'>
-        <h2>
-        AutoSlides lets you effortlessly create scroll-stopping slideshows <br />
-        in just <span>30 seconds. </span>
-        </h2>
-      </div>
-      <div className='getStartedLink' 
-      >
-        <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+
+    <div className='growAudience'>
+
+    <Link className="startYourLink"  href={''} >
+            <svg width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M32.8333 25.145H31.3133V26.665H32.8333V25.145Z" fill="#EDFFFF"/>
 <path d="M32.8333 14.475V11.425H31.3133V12.955H29.7833V9.90503H28.2633V16.005H26.7333V14.475H25.2133V17.525H28.2633V22.095H20.6433V23.625H32.8333V22.095H29.7833V14.475H32.8333Z" fill="#EDFFFF"/>
 <path d="M32.8333 0.765015H29.7833V2.28501H32.8333V0.765015Z" fill="#EDFFFF"/>
@@ -126,23 +86,31 @@ const Hero = () =>
 <path d="M3.88331 5.33502H0.833313V6.85502H3.88331V5.33502Z" fill="#EDFFFF"/>
 <path d="M2.35331 20.575H3.88331V19.045H2.35331V17.525H0.833313V23.625H2.35331V20.575Z" fill="#EDFFFF"/>
 </svg>
+                Start Your Free Trial </Link>
 
-Get Started
-      </div>
+           
 
 
-      <div className="overflowHide">
-        <Slider {...settings}>
-        {images.map((image, index) => (
-                  <div className="imgContainer" key={index}>
-                      <img  className="sliderImg" src={image} alt={`Slide ${index + 1}`}  />
-                  </div>
-              ))}
-        
-        </Slider>
-      </div>
-    </section>
-  )
-}
+                <div className="marqueeContainer">
+                    <div className="bgStripe">
 
-export default Hero
+                    </div>
+                    <marquee><span> <img src="/images/Ghost.svg" alt="" />Create Your First TikTok Now! </span>
+                    
+                    <span>
+                    <img src="/images/Ghost.svg" alt="" />
+                        Create Your First Slideshow Now!
+                    </span>
+                    <span>
+                    <img src="/images/Ghost.svg" alt="" />
+                      Create Your First Reel Now!
+                    </span>
+                    </marquee>
+                </div>
+
+    </div>
+    </>
+  );
+};
+
+export default SplideCarousel;

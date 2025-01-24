@@ -7,7 +7,7 @@ import Curious from "@/Components/Curious";
 import CardGroup from "@/Components/CardGroup";
 import GrowAudience from "@/Components/GrowAudience";
 import Faq from "@/Components/Faq";
-
+import SplideCarousel from "@/Components/AudianceCarousel";
 import Footer from "@/Components/Footer";
 
 export default function Home() {
@@ -27,8 +27,14 @@ export default function Home() {
       {/* <StopCard1/>
      <FromCard2/>
      <GrowCard3/> */}
+
+
+
+     
      <CardGroup/> 
-     <GrowAudience/>
+     <SplideCarousel/>
+     {/* <GrowAudience/> */}
+    
      <Faq/>
      <Footer/>
         
