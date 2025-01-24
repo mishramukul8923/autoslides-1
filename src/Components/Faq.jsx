@@ -17,8 +17,8 @@ const Faq = () => {
 
     <Accordion  defaultActiveKey={['0']} alwaysOpen>
       <div className="Itemm">
-          <Accordion.Item eventKey="0" className='rounded' style={{borderRadius:"20px !IMPORTANT"}}>
-            <Accordion.Header>How does AutoSlides work?</Accordion.Header>
+          <Accordion.Item eventKey="0" className='rounded' >
+            <Accordion.Header id="topAccordion">How does AutoSlides work?</Accordion.Header>
             <Accordion.Body>
             AutoSlides uses AI to transform your long videos into viral-worthy slideshows in just a few clicks. Simply upload your content, and our tool automatically creates optimized, scroll-stopping slides ready for social media.
             </Accordion.Body>

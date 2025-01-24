@@ -6,7 +6,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
-import '@/app/globals.css'
+// import '@/app/globals.css'
 import Link from 'next/link';
 
 // import required modules

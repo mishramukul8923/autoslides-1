@@ -41,6 +41,44 @@ body {
    background-color: #FFF6E4 !important;
 }
 
+/* prakhar */
+/* off canvas */
+.offcanvasBtn {
+  border-radius: 12px !important;
+  padding: 10px 10px;
+  background-color: white !important;
+  border: none !important;
+}
+.offcanvasBtn:hover {
+  background-color: var(--primary-text-color) !important;
+  border: none;
+  color: white !important;
+}
+
+.loginBtnsOffcanvas {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.offcanvasBtn:hover svg path {
+  fill: white;
+}
+.offcanvasContent {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.menu-offcanvas ul {
+  display: flex;
+  gap: 27px;
+  flex-direction: column;
+}
+/* off canvas */
+/* prakhar */
+
+
 .swiper {
   width: 100%;
   padding-top: 50px;
@@ -521,7 +559,7 @@ color: white;
 }
 
 .hero {
-  margin-bottom: 118px;
+  /* margin-bottom: 118px; */
   gap: 24px;
   display: flex;
   flex-direction: column;
@@ -974,7 +1012,7 @@ color: white;
 
 /* -------------------------------------faq---------------------------- */
 .faq {
-  margin-bottom: 105px;
+  margin-bottom: 104px;
 }
 .faq .container {
   max-width: 1330px;
@@ -1003,7 +1041,7 @@ color: white;
 
   background-color: white; */
 /* mukul */
-  padding: 32px;
+  /* padding: 32px;
   box-shadow: none !important;
   color: var(--primary-text-color);
   font-size: 24px;
@@ -1014,7 +1052,7 @@ color: white;
   text-decoration-skip-ink: none;
   border-radius: 24px 24px 0px 0px;
   background-color: #FFF6E4 !important;
-  border-top: 1px solid #0C2EB2;
+  border-top: 1px solid #0C2EB2; */
 }
 .accordion {
   --bs-accordion-color: var(--bs-body-color);
@@ -1027,6 +1065,9 @@ color: white;
   background-color: #FFF6E4 !important;
 }
 
+#topAccordion button{
+  border-top: none !important;
+}
 
 .faq .accordion-body {
   padding: 0px 32px 32px 32px;
@@ -1048,7 +1089,8 @@ color: white;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  /* border-top:  1px solid #0C2EB2; */
+      box-shadow: none;
+      border-top: 1px solid var(--primary-text-color) !important;
 }
 
 .faq .accordion-header {
@@ -1264,6 +1306,39 @@ color: white;
 
 
 @media (max-width: 1600px) {
+  /* prakhar */
+  .siteNavbar{
+margin-bottom: 51px;
+  }
+
+
+.curiousHow{
+  margin-top: 98px;
+  margin-bottom: 149px;
+}
+.contentCard .container{
+margin-bottom: 70px;
+}
+
+.growCard .container{
+  margin-bottom: 149px;
+}
+
+.startYourLink{
+  margin-bottom:101px;
+}
+
+.growAudience{
+  margin-bottom: 85px;
+}
+
+.faq{
+  margin-bottom: 84px;
+}
+ /* prakhar */
+
+
+
   .footer {
     padding: 50px 30px;
    
@@ -1277,7 +1352,7 @@ color: white;
 }
 
 @media (min-width: 1400px) {
-
+ 
   .menu > ul{
     gap: 0px;
   }
@@ -1307,6 +1382,43 @@ color: white;
 
 @media (max-width: 1400px) {
 
+/* prakhar */
+.siteNavbar{
+  margin-bottom: 31px;
+    }
+  
+    .curiousHow{
+      margin-top: 98px;
+      margin-bottom: 149px;
+    }
+  .curiousHow{
+    margin-bottom: 129px;
+  }
+  .contentCard .container{
+  margin-bottom: 50px;
+  }
+  
+  .growCard .container{
+    margin-bottom: 129px;
+  }
+  
+  .startYourLink{
+    margin-bottom:81px;
+  }
+  
+  /* min */
+  .growAudience{
+    margin-bottom: 62px;
+  }
+  
+  .faq{
+    margin-bottom: 64px;
+  }
+/* prakhar */
+
+
+
+
 .curiousHow h1{
   margin-bottom: 60px;
 }
@@ -1333,6 +1445,46 @@ color: white;
    display: flex;
    justify-content: center;
 } */
+
+
+/* prakhar */
+
+
+.siteNavbar{
+  /* min */
+  margin-bottom: 11px;
+    }
+  
+    .curiousHow{
+
+      margin-top: 78px;
+      margin-bottom: 129px;
+    }
+  
+  .contentCard .container{
+    /* min */
+  margin-bottom: 42px;
+  }
+  /* last card */
+  .growCard .container{
+
+    margin-bottom: 105px;
+  }
+  
+  .startYourLink{
+    /* min */
+    margin-bottom:61px;
+  }
+  
+  /* .growAudience{
+    margin-bottom: 62px;
+  } */
+  
+  .faq{
+    margin-bottom: 44px;
+  }
+/* prakhar */
+
 
 
 
@@ -1408,6 +1560,35 @@ justify-content: center; */
 }
 
 @media (max-width: 1060px) {
+
+/* prakhar */
+.curiousHow{
+
+  margin-top: 50px;
+  margin-bottom: 109px;
+}
+
+.curiousHow{
+  margin-bottom: 89px;
+}
+
+/* min */
+.faq{
+  margin-bottom: 20px;
+} 
+
+
+
+.growCard .container{
+
+  margin-bottom: 85px;
+}
+
+/* prakhar */
+
+
+
+
 
 .faq .container{
   max-width: 760px;
@@ -1498,6 +1679,20 @@ justify-content: center; */
 }
 
 @media (max-width: 992px) {
+
+/* prakhar */
+.growCard .container{
+
+  margin-bottom: 62px;
+}
+
+.curiousHow{
+  margin-bottom: 89px;
+}
+
+/* prakhar */
+
+
   .contentCard 
     .text {
       padding: 0px 18px;
@@ -1509,6 +1704,11 @@ justify-content: center; */
   /* .container{
   padding: 18px !important;
 } */
+/* prakhar */
+.curiousHow{
+  margin-bottom: 40px;
+}
+/* prakhar */
 
     .faq  {
     padding: 20px 18px;
