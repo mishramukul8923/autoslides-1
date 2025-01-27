@@ -5,11 +5,11 @@ import { Container, Row, Col } from "react-bootstrap";
 const Curious2 = () => {
   return (
     <section className="curiousHow">
-      <div className="container-fluid">
+      {/* <div className="container-fluid"> */}
        
-            <Row className="heading" >
+            <div className="heading" >
               <h1 className="heading-text" >Curious How AutoSlides  Works? It’s as Easy </h1>
-            </Row>
+            </div>
             
 
             
@@ -124,7 +124,7 @@ const Curious2 = () => {
               </Col>
             </Row>
          */}
-      </div>
+      {/* </div> */}
     </section>
   );
 };

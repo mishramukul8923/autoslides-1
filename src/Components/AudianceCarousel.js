@@ -24,7 +24,7 @@ const SplideCarousel = () => {
     <>     <section className='growAudience'>
     <div>
         <h1 >Grow Your Audience <br /> with Zero Extra Effort</h1>
-        <p>Save time and boost your content. AutoSlides effortlessly turns your long videos into viralready slideshows for all your social media channels. Keep creating, keep posting, and watch  your followers grow.</p>
+        <p>Save time and boost your content. AutoSlides effortlessly turns your long videos into viral-ready slideshows for all your social media channels. Keep creating, keep posting, and watch your followers grow.</p>
     </div> 
     </section>
     <Splide

@@ -361,13 +361,16 @@ imgContainer {
   border: 1px solid transparent;
   /* border: 1px solid transparent; */
 }
+.menu ul li a{
+color: #0C2EB2;
+}
 
-.menu ul li a::before{
+.menu ul li::before{
   position: absolute;
   content: url(/images/point.svg);
   left: -16px;
 }
-.menu ul li a:hover::before {
+.menu ul li:hover::before {
   content: ""; 
 }
 
@@ -467,7 +470,7 @@ border: 1px solid #0C2EB2;
   text-decoration: none;
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 .startedBtn img{
   background-color: #0C2EB2;
@@ -589,7 +592,7 @@ color: white;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: var(--primary-text-color);
-  max-width: 1135px;
+  max-width: 1057px;
 }
 .hero .menu {
   font-size: clamp(0.75rem, 0.583rem + 0.347vw, 1rem);
@@ -670,17 +673,25 @@ color: white;
   margin-bottom: 169px;
   margin-top: 118px;
   /* overflow: hidden; */
-  padding: 20px 10px;
-  max-width: 1760px;
+  /* padding: 20px 10px; */
+  max-width: 1920px;
   margin-left: auto;
+  padding-left: 0px;
+  margin: auto;
+  margin-top: 118px;
+  margin-bottom: 169px;
+  padding-left: 160px;
+
 
 }
 .curiousHow .heading h1{
   font-size: 80px;
   font-weight: 700;
   line-height: 90px;
-  margin: 117px auto;
-  letter-spacing: -4%;
+  /* margin: 1px auto 100px auto; */
+  max-width: 1343px;
+  margin-bottom: 117px;
+
 }
 
 .curiousHow .col-md-6:has(.image) {
@@ -989,7 +1000,7 @@ color: white;
   margin-bottom: 84px;
   display: flex;
   flex-direction: column;
-margin: auto;
+margin: auto auto 40px auto;
   gap: 28px;
 }
 .faq .accordion-button {
@@ -1073,6 +1084,7 @@ margin: auto;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   max-width: 1037px;
+  font-size: 80px;
 }
 .faq h2 {
   font-size: clamp(1.125rem, 1.017rem + 0.403vw, 1.5rem);
@@ -1082,6 +1094,7 @@ margin: auto;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  /* font-size: 24px; */
 }
 
 /* -------------------footer---------------- */
@@ -2008,8 +2021,7 @@ object-fit: cover;
 }
 
 
-/* 
-.menu ul li{
+ .menu ul li{
     text-wrap: nowrap;
     padding: 6px 14px 6px 14px;
     text-decoration: none;
@@ -2017,7 +2029,7 @@ object-fit: cover;
     position: relative;
     border: 1px solid transparent;
     
-  } */
+  } 
   
   /* .menu ul li a::before{
     position: absolute;
@@ -2030,6 +2042,13 @@ object-fit: cover;
 /* =============================================================mukul============================================== */
 
    /*  mukul curious new section */
+
+   .growAudience p {
+    font-size: 24px;
+    line-height: 33px;
+     max-width: 1330px;
+    margin: auto;
+  }
 
    @media(min-width:1200px)
    {
@@ -2084,6 +2103,7 @@ font-weight: 700 ;
   .CuriousSection{
     display: flex;
     justify-content: space-between;
+    gap: 30px;
   }
   .curiousRight{
     padding: 20px 0;
@@ -2092,7 +2112,7 @@ font-weight: 700 ;
     width: 970px;
     height: 714px;
     background-color: #0C2EB2;
-    border-radius: 35px;
+    border-radius: 35px 0 0 35px;
     position: relative;
 
   }
@@ -2191,6 +2211,12 @@ letter-spacing: -0.02em;
 
 .contentCards .cardImg {
   margin: auto;
+  padding-right: 56px;
+}
+
+.formImg{
+  padding-left: 56px;
+  padding-right: unset !important;
 }
 .imageMargin{
   margin: auto !important;
@@ -2242,9 +2268,9 @@ text-align: left;
     height: 530px;
    
 }
-.curiousRightInner .curiousImg img{
+/* .curiousRightInner .curiousImg img{
   max-width: 90%;
-}
+} */
 
 .curiousRightInner .curiousImg {
   position: absolute;
@@ -2297,6 +2323,18 @@ text-align: left;
 .faq .headingText{
   margin-bottom: 40px;
 }
+.faq h1 {
+  margin: auto;
+ 
+  line-height: clamp(2.469rem, 1.558rem + 3.389vw, 5.625rem);
+  letter-spacing: -4px;
+  text-align: center;
+  max-width: 598px;
+  font-size: 65px;
+}
+.parentCreator {
+  margin-bottom: 30px;
+}
 
 
 }
@@ -2338,8 +2376,29 @@ text-align: left;
 .faq .headingText{
   margin-bottom: 40px;
 }
-
-
+.contentCards .cardImg {
+  margin: auto;
+  padding-right: 15px;
+}
+.contentCards h2 {
+  font-size: 35px;
+  line-height: 40px;
+}
+.contentCards h2 {
+  font-size: 35px;
+  line-height: 40px;
+  padding-top: 20px;
+}
+.faq h1 {
+  font-size: 55px;
+}
+.contentCards .cardImg {
+  margin: auto;
+  padding-right: 15px;
+}
+.hero .heading h1 {
+  max-width: 700px;
+}
 
 }
 
@@ -2348,6 +2407,14 @@ text-align: left;
 
 
 @media (max-width:991px){
+  .creatorsImg {
+    margin-bottom: 30px;
+  }
+  .formImg {
+    padding-left: unset !important;
+    padding-right: unset !important;
+    padding-bottom: 20px;
+}
   .parentCreator {
     margin-top: 50px;
 }
@@ -2408,6 +2475,23 @@ text-align: left;
   line-height: 25.9px;
   
 }
+.faq h1 {
+  font-size: 50px;
+}
+.hero .heading h1 {
+  max-width: 650px;
+}
+
+
+
+
+
+
+
+
+
+
+
 }
 
 
@@ -2445,10 +2529,8 @@ curiousHow h2 {
   margin-top: 50px;
 }
 .growAudience {
-  margin-bottom: 105px;
+  margin-bottom: 80px;
   margin-top: 50px;
-
-
 }
 .inputIdeaParent {
   max-width: 100%;
@@ -2461,6 +2543,12 @@ curiousHow h2 {
 }
 .curiousHow {
   padding: unset;
+}
+.growAudience p {
+  font-size: 20px;
+ 
+  max-width: 1030px;
+  margin: auto;
 }
 
 
@@ -2525,7 +2613,7 @@ curiousHow h2 {
   letter-spacing: -0.02em;
 }
 
-growAudience .startYourLink {
+.growAudience .startYourLink {
   margin: 0 auto 121px;
   /* margin: auto; */
   text-decoration: none;
@@ -2550,7 +2638,9 @@ growAudience .startYourLink {
 .growAudience marquee {
   padding: 8px;
 }
-
+.curiousHow p {
+  font-size: 14px;
+}
 
 }
 
@@ -2563,3 +2653,236 @@ growAudience .startYourLink {
 
 
 }
+
+
+.offcanvas-header .btn-close {
+  padding: calc(var(--bs-offcanvas-padding-y) * 0.5) calc(var(--bs-offcanvas-padding-x) * 0.5);
+  margin: calc(-0.5 * var(--bs-offcanvas-padding-y)) calc(-0.5 * var(--bs-offcanvas-padding-x)) calc(-0.5 * var(--bs-offcanvas-padding-y)) auto;
+  color: blue !important; /* Change the text or icon color to blue */
+  background-color: transparent; /* Ensure the background remains clear (or specify a color) */
+  border: none; /* Optional: remove any border if present */
+}
+.offcanvas-header .btn-close {
+  color: blue !important; /* Change icon/text color */
+  background-color: transparent !important; /* No background or specify one */
+  border: none !important; /* Remove border if present */
+}
+
+
+.startedBtn:hover svg path {
+  fill: var(--primary-text-color);
+}
+
+.hero .heading h1 span{
+  position: relative;
+  margin-right: 85px;
+}
+
+.hero .heading h1 span img{
+  position: absolute;
+  /* margin-left: 24px; */
+  right: -120px;
+  bottom: 0;
+}
+.icons .imgBg{
+  cursor: pointer;
+}
+.icons .imgBg:hover{
+  background: white;
+}
+.imgBg svg path {
+  fill: white; /* Set initial fill color */
+}
+
+/* Hover effect */
+.imgBg:hover svg path {
+  fill: #0c2eb2; /* Change color on hover (red in this example) */
+}
+
+
+@media (max-width:1750px){
+  .curiousRightInner {
+    width: 910px;
+    height: 684px;
+}
+}
+
+@media (max-width:1620px){
+  .curiousRightInner .curiousImg {
+    right: 0px;
+    left: 50px;
+}
+
+.curiousRightInner .curiousImg img{
+width: 100%;
+}
+.curiousRightInner {
+  width: 720px;
+  height: 544px;
+}
+}
+
+
+@media (max-width:1440px){
+
+  .curiousHow {
+    padding-left: 40px;
+}
+}
+
+
+
+
+
+@media (max-width:1200px){
+
+  .CuriousSection {
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.freeTrial, .login {
+  padding: 9px 8px;
+  font-size: 16px;
+}
+.menu ul li {
+  padding: 6px 7px;
+}
+.parentCreator {
+  margin-bottom: 25px;
+  margin-top: 50px;
+}
+.menu ul {
+  gap: 20px;
+}
+
+
+.contentCards h2 {
+  font-size: 40px;
+  line-height: 45px;
+}
+.formImg {
+  padding-left: 30px;
+  padding-right: unset !important;
+}
+.contentCards .cardImg {
+  margin: auto;
+  padding-right: 30px;
+}
+
+
+
+}
+
+@media (max-width:991px){
+.contentCards .cardImg {
+  padding-right: 0;
+}
+}
+
+
+@media (max-width:767px){
+  .curiousRightInner {
+    width: 350px;
+    height: 254px;
+    margin-left: auto;
+  }
+  .hero .heading h1 span img {
+    right: -60px;
+    width: 50px;
+}
+.swiper-3d {
+  padding-top: 0px !important;
+}
+.contentCards h2 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 33.6px;
+  letter-spacing: -0.04em;
+}
+.growAudience .startYourLink {
+  margin: 0 auto 0px;
+}
+.faq h1 {
+  font-size: 28px;
+}
+.swiper {
+  height: 400px;
+}
+.CuriousSection {
+  flex-direction: column-reverse;
+}
+.curiousRightInner .curiousImg {
+  left: 20px;
+}
+.curiousHow {
+  padding-left: 18px;
+}
+.contentCards .row{
+  flex-direction: column-reverse;
+}
+.textMargin {
+  margin-top: 0 !important;
+}
+
+.contentCards .row .textMargin{
+  padding: 0 22px;
+}
+.contentCards .cardImg {
+  padding: 0 12px;
+  padding-bottom: 32px;
+}
+.contentCards h2 {
+  padding-top: 22px;
+}
+.contentCardsflx .row{
+  flex-direction: column;
+}
+.splide__slide.is-visible.is-active {
+  width: 200px !important;
+}
+.splide__slide.is-visible.is-active img {
+  height: 283px;
+}
+.splide__slide img {
+  height: 263px;
+}
+.splide__slide {
+  width: 198px !important;
+}
+/* .splide__track {
+  padding-left: 20% !important;
+} */
+
+.creatorsImg {
+  margin-bottom: 0px;
+}
+.curiousHow .heading h1 {
+  margin: 0px auto 10px auto;
+}
+
+.creatorsText {
+  font-size: 10px;
+}
+.creatorsImg img{
+  width: 100px;
+}
+
+
+/* .swiper-slide-visible.swiper-slide-active{
+  width: 126px !important;
+}
+
+.swiper-slide-visible.swiper-slide-active img{
+  height: 169px;
+} */
+
+  }
+  
+
+  @media (max-width:320px){
+  .curiousRightInner {
+    width: 313px;
+    height: 234px;
+    margin-left: auto;
+}
+  }
