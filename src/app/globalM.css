@@ -5,22 +5,14 @@
 :root {
   --primary-text-color: #0C2EB2;
 }
-h1,h2,h3{
-  margin-bottom: 0;
-}
 
 * {
-  margin: 0;
-  padding: 0;
   transition: 300ms all ease;
   font-family: "Space Mono", serif;
   color: var(--primary-text-color);
   /* background-color: #FFF6E4; */
 }
 
-a{
-  text-decoration: none !important;
-}
 
 html,
 body {
@@ -30,8 +22,7 @@ body {
 }
 
 body {
-  /* background-color: #FFF6E4; */
-  /* font-family: Helvetica Neue, Helvetica, Arial, sans-serif; */
+
   font-family: "Space Mono", serif;
   font-size: 14px;
   color: #000;
@@ -40,8 +31,8 @@ body {
   text-align: center;
    background-color: #FFF6E4 !important;
 }
-
 /* prakhar */
+
 /* off canvas */
 .offcanvasBtn {
   border-radius: 12px !important;
@@ -79,13 +70,21 @@ body {
 /* prakhar */
 
 
+
 .swiper {
   width: 100%;
   padding-top: 50px;
   padding-bottom: 50px;
-  height: 400px;
+  height: 500px;
   /* overflow: unset; */
 }
+.swiper-3d {
+  padding-top: 50px !important;
+}
+.swiper-3d .swiper-slide-shadow-left, .swiper-3d .swiper-slide-shadow-right {
+  background-image: unset !important;
+}
+
 
 .swiper-slide {
   background-position: center;
@@ -107,13 +106,11 @@ body {
   object-fit: cover;
   border-radius: 20px;
 }
-
 a,
 button {
   cursor: pointer;
 }
-
-/* @media (max-width : 1280px){
+@media (max-width : 1280px){
   .carouselImg {
     width: 250px;
     height: 380px;
@@ -143,8 +140,10 @@ button {
   }
 }
 
- */
 
+#topAccordion button{
+  border-top: none;
+}
 
 
 /* ---------------------------------------hero carousel-------------------------------------------------- */
@@ -174,68 +173,6 @@ imgContainer {
   width: 100%;
 }
 
-.hero {
-  padding: 20px 10px;
-
-  .overflowHide {
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .slick-track {
-    align-items: center;
-    text-align: center;
-    display: flex;
-  }
-
-  .sliderImg {
-    width: 100%;
-    height: auto;
-  }
-
-  /* .slick-center.slick-slide{
-    outline: none;
-    width: 346px;
-    width: 308px !important;
-} */
-
-.slick-slide {
-  transform: scale(0.8);
-  transition: transform 0.3s ease;
-}
-
-.slick-center {
-  transform: scale(1.2);
-  z-index: 1;
-  height: 407px;
-  width: 308px !important;
-  
-}
-
-
-  .slick-center .imgContainer {
-    width: 100% !important;
-    display: inline-block;
-    padding: 0px 10px;
-    /* max-width: 308px !important; */
-  }
-  .imgContainer {
-    width: 100% !important;
-    display: inline-block;
-    padding: 0px 10px;
-    max-width: 229px !important;
-  }
-
-  .slick-slide {
-    /* width: fit-content !important; */
-    /* Dim non-center slides */
-    transition: opacity 0.5s ease; /* Smooth opacity transition */
-  }
-
-  .slick-list {
-    overflow: visible; /* Allow larger center slide to extend beyond boundaries */
-  }
-}
 
 .hero .heading h1{
   text-align: center;
@@ -313,7 +250,6 @@ imgContainer {
   background-color: var(--primary-text-color);
   border: 2px solid transparent;
 }
-
 .hero .getStartedLink:hover {
   background-color: white;
   color: var(--primary-text-color);
@@ -398,6 +334,13 @@ imgContainer {
   justify-content: space-between;
   align-items: center;
 }
+.accordion-button:not(.collapsed)::after {
+  background-image: url("/images/arrow2.svg") !important;
+}
+.faq .accordion-button::after {
+  background-image: url("/images/arrow2.svg") !important;
+}
+
 
 .menu ul {
   padding-left: 0;
@@ -411,13 +354,33 @@ imgContainer {
 }
 .menu ul li{
   text-wrap: nowrap;
-  padding: 6px 14px 6px 14px;
+  padding: 6px 10px ;
   text-decoration: none;
+  list-style: none;
+  position: relative;
+  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
 }
+
+.menu ul li a::before{
+  position: absolute;
+  content: url(/images/point.svg);
+  left: -16px;
+}
+.menu ul li a:hover::before {
+  content: ""; 
+}
+
 .menu ul li a{ 
   
   text-decoration: none;
 }
+.menu ul li:hover {
+  list-style: none;
+  border-radius: 30px;
+  border: 1px solid #0c2eb2;
+}
+
 .unstyle{
   list-style: none;
 }
@@ -445,12 +408,7 @@ imgContainer {
   font-weight: 700;
 }
 
-.menu ul li:hover {
-  list-style: none;
-  border-radius: 30px;
-  padding: 5px 13px 5px 13px;
-  border: 1px solid #0c2eb2;
-}
+
 
 .logo {
   font-family: Space Mono;
@@ -475,7 +433,7 @@ imgContainer {
 .freeTrial {
   align-items: center;
   display: flex;
-  padding: 12px clamp(0.5rem, -0.665rem + 1.804vw, 1.5rem);
+  padding: 11px 24px;
   border-radius: 9px;
   color: white;
   font-family: Space Mono;
@@ -504,6 +462,7 @@ border: 1px solid #0C2EB2;
   gap: 12px;
   max-width: 239px;
   justify-content: center;
+  align-items: center;
   margin: auto;
   text-decoration: none;
   font-size: 20px;
@@ -527,7 +486,7 @@ border: 1px solid #0C2EB2;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 text-decoration: none;
-  padding: 9px clamp(0.5rem, -0.665rem + 1.804vw, 1.5rem);
+  padding: 11px 24px;
   gap: 10px;
   border-radius: 12px;
   border: 1px;
@@ -559,7 +518,7 @@ color: white;
 }
 
 .hero {
-  /* margin-bottom: 118px; */
+  /* margin-bottom: 24px; */
   gap: 24px;
   display: flex;
   flex-direction: column;
@@ -632,7 +591,6 @@ color: white;
   color: var(--primary-text-color);
   max-width: 1135px;
 }
-
 .hero .menu {
   font-size: clamp(0.75rem, 0.583rem + 0.347vw, 1rem);
 }
@@ -678,6 +636,20 @@ color: white;
   gap: 16px;
   border-radius: 12px;
 
+  /* font-size: 20px;
+  font-weight: 700;
+  line-height: 32px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+
+  cursor: pointer;
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  padding: 14px 28px 14px 28px;
+  gap: 16px;
+  border-radius: 12px; */
   color: white;
   background-color: var(--primary-text-color);
   border: 2px solid transparent;
@@ -702,12 +674,13 @@ color: white;
   max-width: 1760px;
   margin-left: auto;
 
-  
 }
 .curiousHow .heading h1{
   font-size: 80px;
   font-weight: 700;
   line-height: 90px;
+  margin: 117px auto;
+  letter-spacing: -4%;
 }
 
 .curiousHow .col-md-6:has(.image) {
@@ -716,9 +689,6 @@ color: white;
   flex-direction: column;
 }
 
-.curiousHow h1 {
-  margin-bottom: 117px;
-}
 
 .curiousHow h2 {
   font-family: Space Mono;
@@ -730,7 +700,6 @@ color: white;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-
 .curiousHow p {
   font-family: Space Mono;
   font-size: clamp(1.125rem, 1.089rem + 0.134vw, 1.25rem);
@@ -753,7 +722,6 @@ color: white;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
 }
-
 .curiousHow .itemIndex {
   position: relative;
   display: flex;
@@ -782,27 +750,27 @@ color: white;
 }
 
 .curiousHow .image {
-  z-index: 2;
+  display: flex;
   right: -6px;
   width: 92%;
   position: absolute;
   top: 17%;
   border-radius: 23px;
+  z-index: 3;
 }
 
 .curiousHow .backRectangleBottom {
-  z-index: 0;
+  /* z-index: 0; */
   overflow: hidden;
   right: -55px;
   position: absolute;
-  padding-bottom: -93px;
+  /* padding-bottom: -93px; */
   padding: 39%;
   border-radius: 35px;
   /* width: 100%; */
   position: relative;
-  background: var(--primary-text-color);
+  background: #0C2EB2;
 }
-
 .curiousHow .backRectangle{
   border-radius: 23.27px;
   z-index: 1;
@@ -907,7 +875,7 @@ color: white;
 .growAudience {
   /* check if it has problems */
   margin-bottom: 105px;
-  gap: 82px;
+  margin-top: 82px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -944,9 +912,9 @@ color: white;
 .growAudience .startYourLink {
   margin: 0 auto 121px;
   /* margin: auto; */
+  text-decoration: none;
   background-color: #0C2EB2;
   max-width: fit-content;
-
   display: flex;
   font-size: 24px;
   font-weight: 700;
@@ -954,7 +922,6 @@ color: white;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-
   cursor: pointer;
   gap: 16px;
   align-items: center;
@@ -963,6 +930,7 @@ color: white;
   border-radius: 12px;
   color: white;
   background-color: var(--primary-text-color);
+  /* margin-top: 80px; */
 }
 
 .growAudience .startYourLink:hover {
@@ -984,7 +952,7 @@ color: white;
   transform: rotate(-1.25deg);
   width: 179vw;
   height: 94%;
-  background-color:  #6D7EC6;
+  background-color: #6d7ec6;
   z-index: 0;
 }
 
@@ -1012,36 +980,20 @@ color: white;
 
 /* -------------------------------------faq---------------------------- */
 .faq {
-  margin-bottom: 104px;
+  margin-bottom: 105px;
 }
 .faq .container {
-  max-width: 1330px;
   padding: 0px;
 }
 .faq .headingText {
   margin-bottom: 84px;
   display: flex;
   flex-direction: column;
+margin: auto;
   gap: 28px;
 }
-
 .faq .accordion-button {
-/* 
   padding: 32px;
-  box-shadow: none ;
-  color: var(--primary-text-color);
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 33.6px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-
-  border-radius: 24px 24px 0px 0px;
-
-  background-color: white; */
-/* mukul */
-  /* padding: 32px;
   box-shadow: none !important;
   color: var(--primary-text-color);
   font-size: 24px;
@@ -1052,7 +1004,7 @@ color: white;
   text-decoration-skip-ink: none;
   border-radius: 24px 24px 0px 0px;
   background-color: #FFF6E4 !important;
-  border-top: 1px solid #0C2EB2; */
+  border-top: 1px solid #0C2EB2;
 }
 .accordion {
   --bs-accordion-color: var(--bs-body-color);
@@ -1065,9 +1017,6 @@ color: white;
   background-color: #FFF6E4 !important;
 }
 
-#topAccordion button{
-  border-top: none !important;
-}
 
 .faq .accordion-body {
   padding: 0px 32px 32px 32px;
@@ -1089,8 +1038,7 @@ color: white;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-      box-shadow: none;
-      border-top: 1px solid var(--primary-text-color) !important;
+  border-top:  1px solid #0C2EB2;
 }
 
 .faq .accordion-header {
@@ -1110,10 +1058,11 @@ color: white;
   /* margin: 40px 0px; */
   border: 1px solid #0c2eb2;
   border-radius: 24px !important;
-  border-radius: 20px !important;
+  border-radius: 20px;
 }
 
 .faq h1 {
+    margin: auto;
   color: var(--primary-text-color);
   font-family: Space Mono;
   font-size: clamp(1.75rem, 0.812rem + 3.49vw, 5rem);
@@ -1140,7 +1089,7 @@ color: white;
 .footer {
   padding: 90px 160px;
   gap: 12px;
-  opacity: 0px;
+  /* opacity: 0px; */
   background-color: var(--primary-text-color);
 }
 
@@ -1207,7 +1156,7 @@ color: white;
 
 .footer h2,
 .footer h1 {
-  margin-bottom: 0;
+margin-bottom: 0;
   color: white;
 }
 
@@ -1236,7 +1185,10 @@ color: white;
 }
 
 .footer .companyName {
-
+  /* padding-bottom: 40px;
+  border-image: repeating-linear-gradient(90deg, rgb(255, 255, 255) 0, rgb(255, 255, 255) 16px, transparent 0px, transparent 33px);
+  border-image-slice: 1;
+  border-bottom: 4px dashed white; */
   display: flex;
   justify-content: space-between;
 }
@@ -1293,52 +1245,17 @@ color: white;
 } */
 
 /* -----------------------------------media-------------------------------- */
-
 @media (min-width: 1920px) {
-  .curiousHow{
+  /* .curiousHow{
   margin: auto;
-  }
+  } */
   .curiousHow .backRectangle{
     right: -3.5%;
   }
-  
-  }
-
+}
 
 @media (max-width: 1600px) {
-  /* prakhar */
-  .siteNavbar{
-margin-bottom: 51px;
-  }
-
-
-.curiousHow{
-  margin-top: 98px;
-  margin-bottom: 149px;
-}
-.contentCard .container{
-margin-bottom: 70px;
-}
-
-.growCard .container{
-  margin-bottom: 149px;
-}
-
-.startYourLink{
-  margin-bottom:101px;
-}
-
-.growAudience{
-  margin-bottom: 85px;
-}
-
-.faq{
-  margin-bottom: 84px;
-}
- /* prakhar */
-
-
-
+  
   .footer {
     padding: 50px 30px;
    
@@ -1349,83 +1266,66 @@ margin-bottom: 70px;
   .footer h2 {
     font-size: 17px;
   }
+
+
+
+  /* prakhar */
+  .siteNavbar {
+    margin-bottom: 51px;
+  }
+
+  .curiousHow {
+    margin-top: 98px;
+    margin-bottom: 149px;
+  }
+  .contentCard .container {
+    margin-bottom: 70px;
+  }
+
+  .growCard .container {
+    margin-bottom: 149px;
+  }
+
+  .startYourLink {
+    margin-bottom: 101px;
+  }
+
+  .growAudience {
+    margin-bottom: 85px;
+  }
+
+  .faq {
+    margin-bottom: 84px;
+  }
+  /* prakhar */
+
 }
 
-@media (min-width: 1400px) {
- 
-  .menu > ul{
-    gap: 0px;
+/* p */
+@media (max-width: 1440px) {
+    .menu ul {
+      gap: 30px;
+    }
   }
+/* p */
+
+@media (max-width: 1400px) {
+    .menu ul {
+        gap: 0px;
+      }
 
   .contentCard .container{
     max-width: 1600px ;
   }
 
 
-  /* .image {
-      padding: unset;
-      margin: 58px;
-    } */
 
-  /* .backRectangleBottom {
-      top: -22%;
-      left: -46px;
-      z-index: -2;
-      height: 136%;
-      width: 124%;
-    } */
-
-  /* .image {
-      padding: 250px 54px;
-    } */
 }
 
 @media (max-width: 1400px) {
 
-/* prakhar */
-.siteNavbar{
-  margin-bottom: 31px;
-    }
-  
-    .curiousHow{
-      margin-top: 98px;
-      margin-bottom: 149px;
-    }
-  .curiousHow{
-    margin-bottom: 129px;
-  }
-  .contentCard .container{
-  margin-bottom: 50px;
-  }
-  
-  .growCard .container{
-    margin-bottom: 129px;
-  }
-  
-  .startYourLink{
-    margin-bottom:81px;
-  }
-  
-  /* min */
-  .growAudience{
-    margin-bottom: 62px;
-  }
-  
-  .faq{
-    margin-bottom: 64px;
-  }
-/* prakhar */
-
-
-
-
 .curiousHow h1{
   margin-bottom: 60px;
-}
-
-.curiousHow .itemText {
-  gap: 0px;
-  padding: 5px 15px 5px 13px;
 }
 
   .faq .container {
@@ -1433,74 +1333,101 @@ margin-bottom: 70px;
     max-width: 1000px;
   }
 
+  /* prakhar */
+  .siteNavbar {
+    margin-bottom: 31px;
+  }
+
+  .curiousHow .itemText {
+    gap: 0px;
+    padding: 5px 15px 5px 13px;
+  }
+
+  .curiousHow {
+    margin-top: 98px;
+    margin-bottom: 149px;
+  }
+  .curiousHow {
+    margin-bottom: 129px;
+  }
+  .contentCard .container {
+    margin-bottom: 50px;
+  }
+
+  .growCard .container {
+    margin-bottom: 129px;
+  }
+
+  .startYourLink {
+    margin-bottom: 81px;
+  }
+
+  /* min */
+  .growAudience {
+    margin-bottom: 62px;
+  }
+
+  .faq {
+    margin-bottom: 64px;
+  }
+  /* prakhar */
+
+
+
+
   
 }
+
+
+@media (max-width :1280px){
+    .menu ul {
+      gap: 15px;
+    }
+    .freeTrial {
+      padding: 9px 16px;
+    }
+   .curiousHow .itemText{
+    padding: 5px 20px 25px 20px;
+  }
+  .hero .heading h1 {
+    max-width: 850px;
+    line-height: 60px;
+  }
+  .curiousHow .heading h1 {
+    font-size: 61px;
+   
+    line-height: 75px;
+}
+.curiousHow {
+  margin-bottom: 80px;
+  margin-top: 118px;
+  /* overflow: hidden; */
+  
+}
+.accordion{
+  max-width: 1000px;
+  margin: auto;
+}
+
+
+
+  }
+
+
 
 @media (max-width: 1200px) {
 
-/* .contentCard img{
+.contentCard img{
   width: 70%;
-  margin: auto;
-  
+  /* margin: auto;
+   */
    display: flex;
    justify-content: center;
+}
+/* .contentCard .image{
+display: flex;
+justify-content: center;
 } */
-
-
-/* prakhar */
-
-
-.siteNavbar{
-  /* min */
-  margin-bottom: 11px;
-    }
-  
-    .curiousHow{
-
-      margin-top: 78px;
-      margin-bottom: 129px;
-    }
-  
-  .contentCard .container{
-    /* min */
-  margin-bottom: 42px;
-  }
-  /* last card */
-  .growCard .container{
-
-    margin-bottom: 105px;
-  }
-  
-  .startYourLink{
-    /* min */
-    margin-bottom:61px;
-  }
-  
-  /* .growAudience{
-    margin-bottom: 62px;
-  } */
-  
-  .faq{
-    margin-bottom: 44px;
-  }
-/* prakhar */
-
-
-
-
-.contentCard .image{
-
-  order: 1;
-  width: 71%;
-  margin: auto;
-/* display: flex;
-justify-content: center; */
-}
-
-.contentCard ul{
-  padding: 0;
-}
-
 .headingText h2{
   max-width: 900px;
   margin: auto;
@@ -1545,50 +1472,67 @@ justify-content: center; */
   order: 1;
 }
 .contentCard ul{
+  /* padding: 0; */
+
+  /* p */
   margin-bottom: 20px;
   margin-left: 12%;
-
 }
-.contentCard h2 , .contentCard p,.contentCard h3 {
-  margin-bottom: 20px;  
-  margin-left: 8%;
 
-}
+/* prakhar */
+
+  /* p */
+  .menu ul {
+    list-style: none;
+    gap: 0px;
+  }
+
+  .siteNavbar {
+    /* min */
+    margin-bottom: 11px;
+  }
+
+  .curiousHow {
+    margin-top: 78px;
+    margin-bottom: 129px;
+  }
+
+  .contentCard .container {
+    /* min */
+    margin-bottom: 42px;
+  }
+  /* last card */
+  .growCard .container {
+    margin-bottom: 105px;
+  }
+
+  .startYourLink {
+    /* min */
+    margin-bottom: 61px;
+  }
+
+  /* .growAudience{
+    margin-bottom: 62px;
+  } */
+
+  .faq {
+    margin-bottom: 44px;
+  }
+
+  .contentCard h2,
+  .contentCard p,
+  .contentCard h3 {
+    margin-bottom: 20px;
+    margin-left: 8%;
+  }
+
+  /* prakhar */
 
 
   
 }
 
 @media (max-width: 1060px) {
-
-/* prakhar */
-.curiousHow{
-
-  margin-top: 50px;
-  margin-bottom: 109px;
-}
-
-.curiousHow{
-  margin-bottom: 89px;
-}
-
-/* min */
-.faq{
-  margin-bottom: 20px;
-} 
-
-
-
-.growCard .container{
-
-  margin-bottom: 85px;
-}
-
-/* prakhar */
-
-
-
-
 
 .faq .container{
   max-width: 760px;
@@ -1676,27 +1620,54 @@ justify-content: center; */
     gap: 7px;
     order: -1;
   }
+
+/* prakhar */
+.curiousHow {
+    margin-top: 50px;
+    margin-bottom: 109px;
+  }
+
+  .curiousHow {
+    margin-bottom: 89px;
+  }
+
+  /* min */
+  .faq {
+    margin-bottom: 20px;
+  }
+
+  .growCard .container {
+    margin-bottom: 85px;
+  }
+
+  /* prakhar */
+
 }
 
 @media (max-width: 992px) {
-
+  /* .contentCard 
+    .text {
+      padding: 20px 20px;
+    } */
 /* prakhar */
-.growCard .container{
 
-  margin-bottom: 62px;
+.contentCard 
+.text {
+  padding: 0px 18px;
 }
 
-.curiousHow{
+.curiousHow {
+  margin-bottom: 89px;
+}
+
+
+
+.growCard .container {
   margin-bottom: 89px;
 }
 
 /* prakhar */
 
-
-  .contentCard 
-    .text {
-      padding: 0px 18px;
-    }
   
 }
 
@@ -1704,11 +1675,6 @@ justify-content: center; */
   /* .container{
   padding: 18px !important;
 } */
-/* prakhar */
-.curiousHow{
-  margin-bottom: 40px;
-}
-/* prakhar */
 
     .faq  {
     padding: 20px 18px;
@@ -1731,15 +1697,7 @@ justify-content: center; */
     border-radius: 12px;
   }
 
-
-
-
-
-
-
-
  
-
    .footer .companyHeading {
     margin-bottom: 16px;
   }
@@ -1756,9 +1714,40 @@ justify-content: center; */
     margin-bottom: 60px;
   } */
 
+  .curiousHow .backRectangle {
+    border-radius: 23.27px;
+      z-index: 1;
+      right: -0.5%;
+      height: 23%;
+      top: 13%;
+      position: absolute;
+      width: 86%;
+      background-color: #2044D2;}
+
+      .curiousHow  .image {
+        padding: unset;
+           margin: 56px 26px;
+       z-index: 2;
+       right: -6px;
+       width: 87%;
+       position: absolute;
+       top: 9%;
+       border-radius: 23px;
+     }
+      .curiousHow  .backRectangleBottom {
+       padding: 38%;
+           overflow: hidden;
+           top: 0%;
+           right: -68px;
+           z-index: -2;
+           height: auto;
+     }
+
+
+
   
 
-   .curiousHow  .image {
+   /* .curiousHow  .image {
     padding: unset;
     margin: 58px;
   }
@@ -1769,7 +1758,7 @@ justify-content: center; */
     z-index: -2;
     height: 136%;
     width: 124%;
-  }
+  } */
 
   .growAudience {
     gap: 24px;
@@ -1794,13 +1783,24 @@ justify-content: center; */
   .contentCard .image {
     order: 1;
   }
-  .contentCard .text {
-    padding: 0px;
-}
 
   .steps {
     order: 1;
   }
+
+/* prakhar */
+
+
+.curiousHow{
+    margin-bottom: 89px;
+  }
+  
+  .contentCard .text {
+    padding: 0px;
+  }
+  
+  /* prakhar */
+
 }
 
 @media (max-width: 576px) {
@@ -1839,84 +1839,33 @@ justify-content: center; */
     padding: 20px 10px 20px 25px;
   }
 
-  /* .curiousHow .image {
-    box-shadow: 9.61px 11.53px 40.37px 0px #00000026;
-    scale: 0.8;
-    border-radius: 122px;
-    padding: 120px 0px;
-    width: 100%;
-    height: 100%;
-    background-image: url(/src/assets/SliderImg1.png);
-    background-position: center;
-    background-size: cover;
-  } */
+  
 }
 
 
-/* 
-
-.faq .accordion-button {
-  padding: 32px;
-  box-shadow: none;
-  color: var(--primary-text-color);
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 33.6px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-
-  border-radius: 24px 24px 0px 0px;
-
-  background-color: white;
-}
-
-.faq .accordion-body {
-  padding: 0px 32px 32px 32px;
-
-  font-size: clamp(0.875rem, 0.767rem + 0.403vw, 1.25rem);
-  font-weight: 400;
-  line-height: 28.9px;
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-}
-
-.faq .accordion-button::after {
-  color: var(--primary-text-color);
-}
-/* .faq h2.accordion-header  button {
-  font-size: clamp(1.25rem, 1.178rem + 0.268vw, 1.5rem);
-  font-weight: 700;
-  line-height: clamp(1.75rem, 1.649rem + 0.376vw, 2.1rem);
-  text-align: left;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-} */
-
-/* .faq .accordion-header {
+ 
+.faq .accordion-header {
   overflow: hidden;
   border-radius: 24px !important;
-} */
-/* 
+}
+
 .faq .accordion-header:focus {
   outline: none;
-} */
-/* 
+}
+
 .faq .accordion-item {
   backdrop-filter: blur(11.800000190734863px);
 
-  margin-bottom: 32px; */
+  margin-bottom: 32px;
   /* margin: 40px 0px; */
-  /* border: 1px solid #0c2eb2;
+  border: 1px solid #0c2eb2;
   border-radius: 24px !important;
-}  */
-
+} 
 
 
 /* -------------new */
 
-/* /* .faq .accordion-button {
+.faq .accordion-button {
     padding: 32px;
     box-shadow: none;
     color: var(--primary-text-color);
@@ -1931,8 +1880,8 @@ justify-content: center; */
   
     background-color: white;
   }
-   */
-  /* .faq .accordion-body {
+  
+  .faq .accordion-body {
     padding: 0px 32px 32px 32px;
   
     font-size: clamp(0.875rem, 0.767rem + 0.403vw, 1.25rem);
@@ -1941,11 +1890,11 @@ justify-content: center; */
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
-  } */
+  }
   
-  /* .faq .accordion-button::after {
+  .faq .accordion-button::after {
     color: var(--primary-text-color);
-  }  */
+  }
   /* .faq h2.accordion-header  button {
     font-size: clamp(1.25rem, 1.178rem + 0.268vw, 1.5rem);
     font-weight: 700;
@@ -1955,70 +1904,662 @@ justify-content: center; */
     text-decoration-skip-ink: none;
   } */
   
-  /* .faq .accordion-header {
+  .faq .accordion-header {
     overflow: hidden;
     border-radius: 24px !important;
-  } */
+  }
   
-  /* .faq .accordion-header:focus {
+  .faq .accordion-header:focus {
     outline: none;
-  } */
+  }
   
-  /* .faq .accordion-item {
+  .faq .accordion-item {
     backdrop-filter: blur(11.800000190734863px);
   
     margin-bottom: 32px;
+    /* margin: 40px 0px; */
     border: 1px solid #0c2eb2;
     border-radius: 24px !important;
-  } */
+  }
 
 
-  /* @media( max-width : 1440px){
+  @media (max-width :1440px){
     .menu ul {
       gap: 30px;
     }
-  } */
-/* .imageSection{
-  overflow: hidden;
-} */
-
-  /* @media (max-width :1280px){
-    .menu ul {
-      gap: 15px;
-    }
-    .freeTrial {
-      padding: 9px 16px;
-    }
-   .curiousHow .itemText{
-    padding: 5px 20px 25px 20px;
   }
-  .hero .heading h1 {
-    max-width: 850px;
-    line-height: 60px;
-  }
-  .curiousHow .heading h1 {
-    font-size: 61px;
-   
-    line-height: 75px;
-} */
-/* .curiousHow {
-  margin-bottom: 80px;
-  margin-top: 118px;
+.imageSection{
   overflow: hidden;
-  
 }
-.accordion{
-  max-width: 1000px;
-  margin: auto;
-} */
-
-
-
-
-
-
-
-
 
   
  
+
+  .splide__slide img {
+    height: 337px;
+    object-fit: cover;
+  }
+  .splide__slide{
+    width: 255px !important;
+    margin-left: -5px !important;
+  }
+
+  .splide__slide.is-visible.is-active img{
+height: 407px;
+object-fit: cover;
+  }
+
+  .splide__slide.is-visible.is-active{
+    width: 308px !important;
+    margin-left: 10px !important;
+    margin-right: 12px;
+      }
+
+  .splide-slideimg img{
+    width: 100%;
+  }
+
+  .splide {
+    padding: 20px 0;
+  }
+  
+  .splide__slide img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 400ms;
+    transform: scale(0.9);
+    transform-origin: center center;
+  }
+  
+  .splide__slide.is-active img {
+    transform: scale(1);
+  }
+  
+  .splide .splide__arrow {
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    transform: none;
+    border-radius: unset;
+    width: 50px;
+    opacity: 0.9;
+  }
+  
+  .splide .splide__arrow svg {
+    filter: invert(1);
+    width: 24px;
+    height: 24px;
+  }
+  
+  /* .splide__arrow.splide__arrow--prev {
+    left: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+  
+  .splide__arrow.splide__arrow--next {
+    right: 0;
+    background: linear-gradient(270deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  }
+   */
+
+   .splide__list {
+    align-items: center;
+}
+
+
+/* 
+.menu ul li{
+    text-wrap: nowrap;
+    padding: 6px 14px 6px 14px;
+    text-decoration: none;
+    list-style: none;
+    position: relative;
+    border: 1px solid transparent;
+    
+  } */
+  
+  /* .menu ul li a::before{
+    position: absolute;
+    content: url(/images/point.svg);
+    left: -16px;
+  }
+  .menu ul li a:hover::before {
+    content: "";
+  } */
+/* =============================================================mukul============================================== */
+
+   /*  mukul curious new section */
+
+   @media(min-width:1200px)
+   {
+     .contentCards .container{
+       max-width: 1600px;
+       padding: 32px;
+       /* border: 2px solid #0C2EB2;
+       border-radius: 16px; */
+       
+   
+     }
+   
+   }
+
+.faq h2.accordion-header button {
+  color: #0C2EB2;
+}
+.menu-offcanvas ul li a{
+  text-decoration: none;
+}
+.menu-offcanvas ul li a:hover{
+color: #0C2EB2 !important;
+font-weight: 700 ;
+}
+
+.offcanvas-body {
+  background: #FFF6E4;
+}
+.offcanvas-header {
+  background: #FFF6E4;
+}
+/* .loginBtnsOffcanvas .login{
+  background-color: #0C2EB2;
+ color: white;
+ } */
+ .startedBtn:hover{
+  color: #0C2EB2;
+  background-color: white;
+  transition: ease all 0.3s;
+ }
+.offcanvasBtn{
+  background-color: #FFF6E4 !important;
+  background: #FFF6E4;
+}
+
+
+
+.loginBtnsOffcanvas .login:hover{
+ background-color: white;
+ color: #0C2EB2;
+}
+  .CuriousSection{
+    display: flex;
+    justify-content: space-between;
+  }
+  .curiousRight{
+    padding: 20px 0;
+  }
+  .curiousRightInner{
+    width: 970px;
+    height: 714px;
+    background-color: #0C2EB2;
+    border-radius: 35px;
+    position: relative;
+
+  }
+  .curiousRightInner .curiousImg{
+position: absolute;
+top: 10%;
+right: 0;
+display: flex;
+justify-content: end;
+align-items: center;
+border-radius: 24px;
+  }
+  .curiousRightInner .curiousImg img{
+    border-radius: 24px 0 0 24px;
+  }
+
+  .inputIdeaParent{
+    display: flex;
+    max-width: 647px;
+    gap: 123px;
+
+  }
+  .CuriousLeft{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+
+  .inputIdeaImage{
+
+  }
+  .inputNumber{
+    margin: auto;
+font-size: 48px;
+line-height: 44.66px;
+letter-spacing: -0.02em;
+
+  }
+
+  .inputText{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+  }
+  .inputText:hover::before {
+    position: absolute;
+    content: " ";
+    height: 175px;
+    width: 4px;
+    background-color: #0C2EB2;
+    left: -10%;
+}
+
+  .backRectangleBottom {
+    /* z-index: 0; */
+    overflow: hidden;
+    right: -55px;
+    position: absolute;
+    /* padding-bottom: -93px; */
+    padding: 39%;
+    border-radius: 35px;
+    /* width: 100%; */
+    position: relative;
+    background: #0C2EB2;
+  }
+   .backRectangle{
+    border-radius: 23.27px;
+    z-index: 1;
+    right: 1.5%;
+    height: 23%;
+    top: 10%;
+    position: absolute;
+    width: 86%;
+    background-color: #2044D2;
+  
+  }
+  .contentCards{
+    margin-top: 90px;
+  }
+
+  .contentCards .container{
+   
+    border: 2px solid #0C2EB2;
+    border-radius: 16px;
+    
+
+  }
+
+  /* mukul stopCard2 */
+
+
+
+
+
+
+.contentCards .cardImg {
+  margin: auto;
+}
+.imageMargin{
+  margin: auto !important;
+  
+}
+
+.contentCards .cardImg img{
+  margin: auto;
+  max-width: 100%;
+}
+.contentCards h2{
+  
+font-size: 50px;
+font-weight: 700;
+line-height: 70px;
+letter-spacing: -4px;
+text-align: left;
+margin-bottom: 20px;
+
+}
+.contentCards p{
+  font-family: Space Mono;
+font-size: 20px;
+font-weight: 400;
+line-height: 28.9px;
+text-align: left;
+
+
+}
+.contentCards ul li{
+  font-family: Space Mono;
+font-size: 20px;
+line-height: 35px;
+text-align: left;
+
+
+}
+.contentCards h3{
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+
+
+@media (max-width:1440px){
+  .curiousRightInner {
+    width: 700px;
+    height: 530px;
+   
+}
+.curiousRightInner .curiousImg img{
+  max-width: 90%;
+}
+
+.curiousRightInner .curiousImg {
+  position: absolute;
+  /* top: 10%; */
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  /* right: -25%; */
+  border-radius: 24px;
+}
+.contentCards h2 {
+  font-size: 42px;
+  line-height: 60px;
+ 
+}
+.CuriousLeft {
+  gap: 40px;
+}
+
+}
+
+
+
+@media (max-width:1366px){
+  
+  .inputIdeaParent {
+  
+    gap: 80px;
+  }
+  .curiousHow .heading h1 {
+    font-size: 70px;
+    line-height: 83px;
+    margin: 90px auto;
+  }
+  .faq .accordion-button {
+    padding: 25px;
+  }
+
+
+}
+@media (max-width:1280px){
+
+.curiousRightInner {
+  width: 600px;
+  height: 450px;
+}
+.CuriousLeft {
+  gap: 20px;
+}
+.faq .headingText{
+  margin-bottom: 40px;
+}
+
+
+}
+@media (max-width:1024px){
+
+  .contentCards h2 {
+    font-size: 35px;
+    line-height: 45px;
+}
+.contentCards p {
+  
+  font-size: 18px;
+  line-height: 25.9px;
+  
+}
+.contentCards ul li {
+  
+  font-size: 18px;
+  line-height: 30px;
+
+}
+.CuriousLeft {
+  gap: 30px;
+}
+.CuriousSection {
+
+  flex-wrap: wrap;
+}
+.inputIdeaParent {
+  max-width: 90%;
+  gap: 123px;
+  margin: auto;
+}
+.curiousHow .heading h1 {
+  font-size: 60px;
+  line-height: 65px;
+  margin: 60px auto;
+}
+.faq .headingText{
+  margin-bottom: 40px;
+}
+
+
+
+}
+
+
+
+
+
+@media (max-width:991px){
+  .parentCreator {
+    margin-top: 50px;
+}
+.hero .heading h1 {
+  max-width: 850px;
+  line-height: 60px;
+  font-size: 51px;
+}
+  .CuriousSection{
+    /* flex-wrap: wrap; */
+    justify-content: center;
+  }
+  .inputIdeaParent {
+    /* max-width: 100%; */
+  }
+  .curiousRightInner {
+    /* width: 100%; */
+    /* height: 714px; */
+    position: relative;
+}
+.textMargin{
+  margin-top: 40px !important;
+}
+.cardImg{
+  margin-top: 20px !important;
+}
+.contentCards h2 {
+  font-size: 27px;
+  line-height: 30px;
+}
+.contentCards h3 {
+  font-size: 19px;
+}
+.curiousHow .heading h1 {
+  font-size: 50px;
+  line-height: 73px;
+  margin: 50px auto;
+  max-width: 100%;
+  /* width: 100%; */
+}
+.curiousHow {
+  margin-top: unset;
+ 
+}
+.growAudience p {
+  margin: auto;
+  max-width: 90%;
+}
+.faq .headingText {
+  margin-bottom: 84px;
+  margin: 20px auto 40px auto;
+  gap: 28px;
+}
+.faq .accordion-body {
+  padding: 0px 20px 20px 30px;
+  font-size: clamp(0.875rem, 0.767rem + 0.403vw, 1.25rem);
+  font-weight: 400;
+  line-height: 25.9px;
+  
+}
+}
+
+
+
+
+
+@media(max-width:768px){
+
+  .curiousHow {
+    margin-top: unset;
+    margin-bottom: 0px;
+}
+  .curiousHow .heading h1 {
+    font-size: 40px;
+    line-height: 60px;
+    margin: 0px auto 50px auto;
+
+}
+.CuriousLeft {
+  gap: 20px;
+}
+curiousHow h2 {
+
+  font-size:22px;
+  line-height: 35.66px;
+  
+}
+.curiousHow p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  
+}
+.contentCards {
+  margin-top: 50px;
+}
+.growAudience {
+  margin-bottom: 105px;
+  margin-top: 50px;
+
+
+}
+.inputIdeaParent {
+  max-width: 100%;
+  gap: 100px;
+  margin: auto;
+}
+.CuriousSection {
+  /* flex-wrap: wrap; */
+  justify-content: end;
+}
+.curiousHow {
+  padding: unset;
+}
+
+
+
+}
+
+
+
+
+
+
+
+
+@media(max-width:605px){
+  .curiousRightInner {
+    width: 400px;
+    height: 300px;
+}
+.inputIdeaParent {
+  
+  gap: 30px;
+ 
+}
+.contentCards h2 {
+  font-size: 22px;
+  line-height: 27px;
+}
+.contentCards p {
+  font-size: 16px;
+  line-height: 20.9px;
+}
+.contentCards ul li {
+  font-size: 16px;
+  line-height: 25px;
+}
+.growAudience p {
+  margin: auto;
+  max-width: 98%;
+  font-size: 16px;
+}
+.growAudience {
+  margin-bottom: 15px;
+  margin-top: 40px;
+}
+.faq h2.accordion-header button {
+  font-size: 18px;
+}
+.hero .heading h1 {
+  max-width: 100%;
+  line-height: 27px;
+  font-size: 27px;
+}
+.curiousHow .heading h1 {
+  font-size: 27px;
+  line-height: 35px;
+  margin: 0px auto 35px auto;
+}
+.inputNumber {
+  margin: auto;
+  font-size: 35px;
+  line-height: 40.66px;
+  letter-spacing: -0.02em;
+}
+
+growAudience .startYourLink {
+  margin: 0 auto 121px;
+  /* margin: auto; */
+  text-decoration: none;
+  background-color: #0C2EB2;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  display: flex
+;
+  font-size: 21px;
+
+  line-height: 37px;
+  text-align: left;
+  gap: 16px;
+  align-items: center;
+  padding: 10px 15px ;
+  gap: 16px;
+}
+.growAudience .startYourLink {
+  padding: 10px 12px;
+  font-size: 18px;
+}
+.growAudience marquee {
+  padding: 8px;
+}
+
+
+}
+
+@media(max-width:450px){
+  .creatorsText{
+    font-size: 14px;
+  }
+
+
+
+
+}

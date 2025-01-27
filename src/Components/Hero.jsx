@@ -97,7 +97,7 @@ const Hero = () =>
 <path d="M2.35331 20.575H3.88331V19.045H2.35331V17.525H0.833313V23.625H2.35331V20.575Z" fill="#EDFFFF"/>
 </svg>
 
-Get Started
+<span>Get Started</span>
       </div>
 
 

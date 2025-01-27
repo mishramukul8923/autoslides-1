@@ -46,6 +46,7 @@ export default function page() {
             in just <span>30 seconds. </span>
           </h2>
 </div></div>
+
        <Link href={''}  className='startedBtn'><span><img src='/images/startedLogo.svg'/></span> Get Started</Link>
 
 

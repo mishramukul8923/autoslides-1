@@ -1,13 +1,14 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 import Slider from "../Components/slider";
-import Hero from "@/Components/AudianceCarousel";
+// import Hero from "@/Components/AudianceCarousel";
 import NavSite from "@/Components/NavSite";
 import Curious from "@/Components/Curious";
+import Curious2 from "@/Components/Curious2";
 import CardGroup from "@/Components/CardGroup";
-import GrowAudience from "@/Components/GrowAudience";
+// import GrowAudience from "@/Components/GrowAudience";
 import Faq from "@/Components/Faq";
-
+import SplideCarousel from "@/Components/AudianceCarousel";
 import Footer from "@/Components/Footer";
 
 export default function Home() {
@@ -16,22 +17,17 @@ export default function Home() {
       <main className={styles.main}>
         <NavSite/>
         <Slider/>
-        <Curious/> 
-     
-        {/* <Hero/> */}
+        {/* <Curious/>  */}
+        <Curious2/>
 
-
-        {/* <Navbar/> */}
-     {/* <Hero/> */}
     
-      {/* <StopCard1/>
-     <FromCard2/>
-     <GrowCard3/> */}
-     <CardGroup/> 
-     <GrowAudience/>
+    
+      {/* <GrowAudience/>  */}
+        <CardGroup/>
+       <SplideCarousel/>
      <Faq/>
      <Footer/>
-        
+
      </main>
     </div>
   );

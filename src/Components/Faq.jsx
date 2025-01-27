@@ -15,7 +15,7 @@ const Faq = () => {
 
     <div  className='faqAccordian'>
 
-    <Accordion  defaultActiveKey={['0']} alwaysOpen>
+    <Accordion  defaultActiveKey="0">
       <div className="Itemm">
           <Accordion.Item eventKey="0" className='rounded' >
             <Accordion.Header id="topAccordion">How does AutoSlides work?</Accordion.Header>

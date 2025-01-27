@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button, Offcanvas } from "react-bootstrap";
+import Link from "next/link";
 
 function OffCanvasExample() {
   const [show, setShow] = useState(false);
@@ -26,18 +27,27 @@ function OffCanvasExample() {
         <Offcanvas.Body><div className="offcanvasContent">
             
             <div className="menu-offcanvas">
-            <ul >
-              <li className="unstyle" ><a href="" className="logo" >Home</a></li>
-              <li  ><a href="">Solutions</a></li>
-              <li  ><a href="">About Us</a></li>
-              <li  ><a href="">Resources</a></li>
+            <ul>
+              <li >
+                <Link href="/" >Home</Link>
+              </li>
+              <li>
+                <Link href="/">Solutions</Link>
+              </li>
+              <li>
+                <Link href="/">About Us</Link>
+              </li>
+              <li>
+                <Link href="/">Resources</Link>
+              </li>
             </ul>
+
                    </div>
             
                    <div className="loginBtnsOffcanvas" >
                    
-            <a className="freeTrial" href="">Start Free Trial</a>
-            <a className="login" href="">Log In</a>
+            <Link className="freeTrial" href="">Start Free Trial</Link>
+            <Link className="login" href="">Log In</Link>
             
                    </div>
         </div>
