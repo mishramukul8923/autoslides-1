@@ -749,11 +749,11 @@ color: white;
 }
 
 .curiousHow .step:hover .itemIndex::after {
-  top: 14%;
+  top: 0;
   right: 0;
   position: absolute;
   content: "";
-  height: 72%; /* Length of the border */
+  height: 100%; /* Length of the border */
   border-right: 4px solid var(--primary-text-color); /* Border style */
 }
 .curiousHow .step:hover h2 {
@@ -2875,6 +2875,23 @@ width: 100%;
 .swiper-slide-visible.swiper-slide-active img{
   height: 169px;
 } */
+
+.inputIdeaImage img{
+  width: 32px;
+  height: 32px;
+}
+.inputNumber {
+  font-size: 32px;  
+}
+.siteNavbar .container {
+  padding: 0;
+}
+.splide{
+  height: 300px;
+}
+.inputText:hover::before {
+  height: 100%;
+}
 
   }
   
