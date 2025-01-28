@@ -2734,6 +2734,23 @@ margin-bottom: 50px!important;
   height: 272px;
 }
 
+.offcanvasBtn:hover {
+  background-color: unset !important;
+  }
+  .offcanvasBtn:hover svg path{
+  fill: #0C2EB2 !important;
+  }
+  .menu-offcanvas ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .menu-offcanvas ul li a{
+  color: #0C2EB2;
+  }
+  .btn-close{
+    opacity: 1 !important;
+  }
 
 
 @media (max-width:1750px){
@@ -2962,6 +2979,7 @@ width: 100%;
 }
 .hero {
   padding-top: 0;
+  padding-bottom: 0;
 }
 
 .growAudience p{
@@ -3029,6 +3047,13 @@ letter-spacing: -0.04em;
 .swiper-3d .swiper-wrapper {
   padding-top: 30px;
 }
+.sliderpad {
+  padding-top: 0 !important;
+}
+.startedBtn {
+  padding: 11.5px 28px;
+}
+
   }
   
 
