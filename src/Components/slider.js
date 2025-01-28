@@ -81,7 +81,7 @@ export default function page() {
     <div className='sliderpad' style={{ 
         maxWidth: "1920px",  // Adjust this value based on your needs
         margin: "0 auto",    // Center the slider
-        padding: "20px",     // Add some padding
+        padding: "20px 0",     // Add some padding
          }}  // Prevent any overflow
         >
       <Swiper

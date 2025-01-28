@@ -46,6 +46,10 @@ const SplideCarousel = () => {
             perPage: 1,
             padding: "30%",
           },
+          500: {
+            perPage: 1,
+            padding: "30%",
+          },
         },
       }}
       aria-label="Splide Carousel"
