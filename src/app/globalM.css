@@ -135,8 +135,11 @@ button {
 @media (max-width : 480px){
   .carouselImg {
     width: 60px;
-    height: 380px;
+    height: 160px;
     
+  }
+  .swiper-slide-active{
+    width: 126px;
   }
 }
 
@@ -2042,6 +2045,9 @@ object-fit: cover;
 /* =============================================================mukul============================================== */
 
    /*  mukul curious new section */
+   .startedShow{
+    display: none;
+   }
 
    .growAudience p {
     font-size: 24px;
@@ -2118,7 +2124,7 @@ font-weight: 700 ;
   }
   .curiousRightInner .curiousImg{
 position: absolute;
-top: 10%;
+top: 98px;
 right: 0;
 display: flex;
 justify-content: end;
@@ -2127,6 +2133,7 @@ border-radius: 24px;
   }
   .curiousRightInner .curiousImg img{
     border-radius: 24px 0 0 24px;
+    z-index: 1;
   }
 
   .inputIdeaParent{
@@ -2274,7 +2281,7 @@ text-align: left;
 
 .curiousRightInner .curiousImg {
   position: absolute;
-  /* top: 10%; */
+  top: 68px;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -2641,6 +2648,14 @@ curiousHow h2 {
 .curiousHow p {
   font-size: 14px;
 }
+.startedShow{
+display: flex;
+margin-bottom: 50px!important;
+
+}
+.startedHide{
+  display: none;
+}
 
 }
 
@@ -2698,6 +2713,27 @@ curiousHow h2 {
 .imgBg:hover svg path {
   fill: #0c2eb2; /* Change color on hover (red in this example) */
 }
+
+
+/* .curiousImg img{
+  position: relative;
+} */
+
+.curiousImg::after{
+  position: absolute;
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: -35px;
+  background-color: #2044D2;
+  z-index: 0;
+  right: 0;
+  width: 100%;
+  max-width: 796px;
+  border-top-left-radius: 24px;
+  height: 272px;
+}
+
 
 
 @media (max-width:1750px){
@@ -2806,7 +2842,7 @@ width: 100%;
   font-size: 28px;
 }
 .swiper {
-  height: 400px;
+  height:200px;
 }
 .CuriousSection {
   flex-direction: column-reverse;
@@ -2892,7 +2928,107 @@ width: 100%;
 .inputText:hover::before {
   height: 100%;
 }
+.curiousRightInner .curiousImg {
+  top: 25px;
+}
+.curiousRightInner .curiousImg img {
+  border-radius: 10px 0 0 10px;
+}
+.curiousImg::after {
+  top: -15px;
+  max-width: 306px;
+  border-top-left-radius: 10px;
+  height: 100px;
+}
+.curiousRightInner {
+  border-radius: 15px 0 0 15px;
+  height: 274px;
+}
+.curiousRightInner .curiousImg {
+  top: 37px;
+}
+.CuriousSection {
+  gap: 20px;
+}
+.inputText:hover::before {
+  left: -18px;
+}
+.startedBtn {
+  margin: 0 18px;
+  max-width: 100%;
+}
+.hero .heading h1 {
+  font-size: 31px;
+}
+.hero {
+  padding-top: 0;
+}
 
+.growAudience p{
+font-size: 18px;
+font-weight: 400;
+line-height: 25.2px;
+letter-spacing: -0.02em;
+}
+
+.growAudience h1{
+font-size: 28px;
+font-weight: 700;
+line-height: 39.2px;
+letter-spacing: -0.04em;
+margin-bottom: 24px;
+}
+
+.faq h1{
+font-size: 28px;
+font-weight: 700;
+line-height: 39.2px;
+letter-spacing: -0.04em;
+
+}
+.faq .headingText {
+  gap: 20px;
+}
+#topAccordion button {
+  border-radius: 42px;
+  padding: 16px;
+}
+.faq .accordion-item {
+    border-radius: 12px !important;
+}
+.faq .accordion-header {
+  border-radius: 12px !important;
+}
+.faq h2.accordion-header button {
+  border-radius: 11px;
+  padding: 16px;
+}
+.faq .accordion-button::after {
+  margin-top: 8px;
+}
+.faq .accordion-body {
+  padding: 0 16px 16px 16px;
+}
+.footer .mail{
+  margin: 0;
+}
+.carouselImg {
+  width: 60px;
+  height: 160px;
+  
+}
+.swiper-slide-active{
+  width: 126px !important;
+}
+.swiper-slide-next{
+  width: 150px !important;
+}
+.swiper-slide{
+  width: 270px !important;
+}
+.swiper-3d .swiper-wrapper {
+  padding-top: 30px;
+}
   }
   
 
