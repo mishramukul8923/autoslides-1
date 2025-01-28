@@ -1,7 +1,7 @@
 import {  Row, Col, Container } from "react-bootstrap";
 
 
-const FromCard3 = () => {
+const FromCard = () => {
   return (
     <div className="contentCards contentCardsflx">
       <Container  >
@@ -29,4 +29,4 @@ const FromCard3 = () => {
   )
 }
 
-export default FromCard3
+export default FromCard

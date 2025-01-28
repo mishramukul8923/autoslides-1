@@ -1,6 +1,6 @@
 import {  Row, Col, Container } from "react-bootstrap";
 
-const GrowCard4 = () => {
+const GrowCard = () => {
   return (
     <div className="contentCards">
       <Container >
@@ -23,4 +23,4 @@ const GrowCard4 = () => {
   )
 }
 
-export default GrowCard4;
+export default GrowCard;

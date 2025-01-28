@@ -1837,6 +1837,7 @@ justify-content: center;
     width: 29px;
   }
 
+
 }
 
 @media (max-width: 430px) {
@@ -3043,6 +3044,12 @@ letter-spacing: -0.04em;
   width: 60px;
   height: 160px;
   
+}
+.footer .companyName{
+  margin: auto;
+}
+.footer .companyHeading{
+  margin: auto;
 }
 
 /* .swiper-slide-next{

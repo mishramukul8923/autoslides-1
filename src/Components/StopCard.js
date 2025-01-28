@@ -1,6 +1,6 @@
 import {  Row, Col, Container } from "react-bootstrap";
 
-const StopCard2 = () => {
+const StopCard = () => {
   return (
     <section className="contentCards">
       <div className="container" >
@@ -34,4 +34,4 @@ const StopCard2 = () => {
   )
 }
 
-export default StopCard2
+export default StopCard

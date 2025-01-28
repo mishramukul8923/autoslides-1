@@ -1,20 +1,20 @@
 "use client"
 import React from 'react'
 
-import StopCard2 from './StopCard2'
+import StopCard from './StopCard'
 
-import FromCard3 from './FormCard3'
-import GrowCard4 from './GrowCard4'
+import FromCard from './FormCard'
+import GrowCard from './GrowCard'
 
 const CardGroup = () => {
   return (
     <section className='cardGroup'>
 
-<StopCard2/>
+<StopCard/>
 
-<FromCard3/>
+<FromCard/>
 
-<GrowCard4/>
+<GrowCard/>
     </section>
   )
 }
