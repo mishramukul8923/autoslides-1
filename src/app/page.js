@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import styles from "./page.module.css";
 import Slider from "../Components/slider";
@@ -8,6 +9,7 @@ import CardGroup from "@/Components/CardGroup";
 import Faq from "@/Components/Faq";
 import SplideCarousel from "@/Components/AudianceCarousel";
 import Footer from "@/Components/Footer";
+import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Import Bootstrap JavaScript
 
 export default function Home() {
   return (
