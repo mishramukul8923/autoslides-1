@@ -47,7 +47,7 @@ function OffCanvasExample() {
                    <div className="loginBtnsOffcanvas" >
                    
             <Link className="freeTrial" href="">Start Free Trial</Link>
-            <Link className="login" href="">Log In</Link>
+            <Link className="login" href="https://ninjaz-slide.vercel.app/">Log In</Link>
             
                    </div>
         </div>

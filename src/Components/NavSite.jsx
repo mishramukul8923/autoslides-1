@@ -38,12 +38,12 @@ const NavSite = () => {
 
        <div className="loginBtns">
         <Link className="freeTrial" href="/trial">Start Free Trial</Link>
-        <Link className="login" href="/login">Log In</Link>
+        <Link className="login" href="https://ninjaz-slide.vercel.app/">Log In</Link>
        </div>
        <div className="toggle">
         
 <OffCanvasExample/>
-
+    
         </div>
        </div>
 
