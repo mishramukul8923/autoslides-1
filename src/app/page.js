@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import BootstrapClient from "@/Components/BootstrapClient"; // ✅ Import Bootstrap Loader
 import styles from "./page.module.css";
 import Slider from "../Components/slider";
 import NavSite from "@/Components/NavSite";
@@ -8,7 +9,7 @@ import CardGroup from "@/Components/CardGroup";
 import Faq from "@/Components/Faq";
 import SplideCarousel from "@/Components/AudianceCarousel";
 import Footer from "@/Components/Footer";
-import BootstrapClient from "@/Components/BootstrapClient"; // ✅ Import Bootstrap Loader
+
 
 export default function Home() {
   return (

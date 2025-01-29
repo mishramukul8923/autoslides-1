@@ -8,5 +8,5 @@ export default function BootstrapClient() {
     }
   }, []);
 
-  return null; // No UI, just loads Bootstrap JS
+  return null; 
 }

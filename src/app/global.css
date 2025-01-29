@@ -2150,9 +2150,7 @@ border-radius: 24px;
     gap: 48px;
   }
 
-  .inputIdeaImage{
-
-  }
+  
   .inputNumber{
     margin: auto;
 font-size: 48px;
@@ -3090,4 +3088,10 @@ letter-spacing: -0.04em;
     height: 234px;
     margin-left: auto;
 }
+  }
+
+
+
+  .inputIdeaImage img{
+    text-align: start !important;
   }
