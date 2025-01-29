@@ -135,12 +135,16 @@ button {
 @media (max-width : 480px){
   .carouselImg {
     width: 60px;
-    height: 160px;
+    /* height: 160px; */
     
   }
+  .footer h2 {
+    font-size: 15px;
+}
   .swiper-slide-active{
     width: 126px;
   }
+
 }
 
 
@@ -2795,8 +2799,9 @@ width: 100%;
 @media (max-width:1200px){
 
   .CuriousSection {
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     justify-content: center;
+    /* align-items: center; */
 }
 .freeTrial, .login {
   padding: 9px 8px;
@@ -2839,6 +2844,13 @@ width: 100%;
 
 }
 
+
+@media (max-width:1140px){
+.CuriousSection {
+  flex-wrap: wrap;
+}
+}
+
 @media (max-width:991px){
 .contentCards .cardImg {
   padding-right: 0;
@@ -2871,9 +2883,7 @@ width: 100%;
 .faq h1 {
   font-size: 28px;
 }
-.swiper {
-  height:200px;
-}
+
 .CuriousSection {
   flex-direction: column-reverse;
 }
@@ -3045,7 +3055,7 @@ letter-spacing: -0.04em;
 }
 .carouselImg {
   width: 60px;
-  height: 160px;
+  /* height: 160px; */
   
 }
 .footer .companyName{
@@ -3054,25 +3064,6 @@ letter-spacing: -0.04em;
 .footer .companyHeading{
   margin: auto;
 }
-
-/* .swiper-slide-next{
-  width: 150px !important;
-}
-.swiper-slide{
-  width: 270px !important;
-}
-.swiper-slide-active{
-  width: 126px !important;
-} */
-/* .swiper-slide{
-  width: 200px !important;
-} */
- /* .swiper-slide-visible.swiper-slide-active{
-  width: 126px !important;
- }
- .swiper-slide-prev img, .swiper-slide-next img{
-  width: 200px !important;
- } */
 
 .swiper-3d .swiper-wrapper {
   padding-top: 30px;
@@ -3083,9 +3074,21 @@ letter-spacing: -0.04em;
 .startedBtn {
   padding: 11.5px 28px;
 }
+.curiousHow h2 {
+  margin: 0;
+}
 
   }
   
+  @media (max-width:500px){
+    .carouselImg {
+      height: 160px;
+  }
+  .swiper {
+    height:200px;
+  }
+
+  }
 
   @media (max-width:320px){
   .curiousRightInner {
