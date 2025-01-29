@@ -950,12 +950,12 @@ color: white;
   color: white;
   background-color: var(--primary-text-color);
   /* margin-top: 80px; */
+  border: 1px solid #0C2EB2;
 }
 
 .growAudience .startYourLink:hover {
-  background-color: white;
+  background-color: transparent;
   color: var(--primary-text-color);
-  border: 2px solid var(--primary-text-color);
 }
 
 .growAudience .startYourLink:hover svg path {
